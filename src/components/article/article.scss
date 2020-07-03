@@ -4,23 +4,27 @@
 
 .description {
   width: 100%;
-
-  // @include desktop {  
-  //     padding: 0px;
-  // }
-
-  // .description-container {
-  //     margin-left: 8px;
-  // }
+  color: white;
 
   &__title {
-    color: black; // change to global
+    margin: 16px 0px;
+    @include h1-text-style;
+
+    @include tablet {
+      @include tablet-h1-text;
+    }
+
+    @include desktop {
+      margin: 32px 0px;
+    }
   }
 
   &__top {
-    border-bottom: solid 2px #E1E1E1;
+    border-bottom: solid 2px darkslateblue;
+    padding-bottom: 16px;
 
     @include tablet {
+        padding: 0px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -33,36 +37,28 @@
     flex-direction: row;
 
     @include tablet {
-        justify-content: flex-start;
+      justify-content: flex-start;
     }
 
   }
 
   &__name {
-    @include h4-text-style;
-  }
-
-  &__timestamp {
-    color: #E1E1E1;
-    font-weight: 100;   
-    margin-left: 8px;
-    @include h4-text-style;
+    @include h3-text-style;
 
     @include tablet {
-        margin-left: 16px;
+      @include tablet-h3-text;
     }
-
   }
 
   &__stats {
     display: flex;
     flex-direction: row;
     align-items: center;
-    @include h5-text-style;
-    margin: 24px 0px;
+    @include h4-text-style;
 
-    .views {
-      margin: 0 16px;
+    @include tablet {
+      @include tablet-h4-text;
+      margin: 0;
     }
 
     .likes {
@@ -72,10 +68,11 @@
 
   &__paragraph {
     margin: 16px 0px;
-    @include h4-text-style;
+    @include h3-text-style;
 
     @include tablet {
-        width: 75%;
+      @include tablet-h3-text;
+      width: 75%;
     }
   }
 }

@@ -1,0 +1,16 @@
+  
+@import '../../partials/colors';
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 25px;
+  font-size: 0.75rem;
+  background: $global-bg-color;
+  color: white;
+}
+
+.footer-anchor {
+  text-decoration: none;
+  color: rgb(216, 37, 216);
+}

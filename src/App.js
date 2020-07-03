@@ -1,25 +1,36 @@
 import React from 'react';
-import './App.scss';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+// import components
 import Nav from './components/nav/nav';
-import Hero from './components/hero/hero';
-import Article from './components/article/article';
-import Comments from './components/comments/comments';
-import Aside from './components/aside/aside';
+import Main from './components/main/main';
+import Login from './components/login/login';
+import Footer from './components/footer/footer';
+// import assets
+import Logo from './assets/Logo/Arcade-logo.png';
+import UserImage from './assets/Images/mario.png';
 
-const App = () => {
-  return (
-    <div className="App">
-      <Nav />
-      <Hero />
-      <main>
-        <div className="not-aside">
-          <Article />
-          <Comments />
-        </div>
-        <Aside />
-      </main>
-    </div>
-  );
+class App extends React.Component  {
+  render () {
+    return (
+      <BrowserRouter>
+      <div className="App">
+          <Nav logo={Logo} image={UserImage}/>
+        <Switch>
+          <Route path="/login" component={Login}/>
+          <Route 
+            path="/" exact
+            render={(routeProps) => <Main routeProps={routeProps} />}
+          />
+          <Route 
+            path="/video/:id"
+            render={(routeProps) => <Main routeProps={routeProps} />}
+          />
+        </Switch>
+        <Footer/>
+      </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;

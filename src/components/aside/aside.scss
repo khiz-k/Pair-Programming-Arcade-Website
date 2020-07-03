@@ -2,7 +2,7 @@
 @import '../../partials/fonts';
 @import '../../partials/mixins';
 
-.next-video {
+.other-games {
   width: 100%;
 
   @include tablet {
@@ -10,19 +10,20 @@
   }
 
   @include desktop {
-    width: 25%;
+    width: 33%;
     margin-left: 32px;
   
   }
 
   &__title {
     margin: 8px 0px;
-    color: $border-color;
-    @include h5-text-style;
+    color: white;
+    text-transform: uppercase;
+    @include h4-text-style;
     
     @include tablet {
         margin: 32px 0px;
-        @include tablet-h5-text;
+        @include tablet-h4-text;
     }
   }
 
@@ -30,43 +31,36 @@
     width: 100%;
     list-style-type: none;
     padding: 0;
+  }
 
-    .list-item {
-      padding: 5px;
-     
-      .item-anchor {
-        @include flex-row;
-        justify-content: flex-start;
-        align-items: center;
-        text-decoration: none;
-      }
+  &__item-anchor {
+    @include flex-column;
+    color: $global-color;
+    justify-content: flex-start;
+    text-decoration: none;
+    width: fit-content;
+    margin: 0;
+  }
+
+  &__item-image {
+    width: 120px;
+    height: 70px;
+    opacity: 0.9;
+    border-radius: 2.5px;
     
-      .item-image {
-        width: 120px;
-        height: 70px;
-        opacity: 0.9;
-        
-        &:hover {
-          opacity: 1;
-        }
-      }
-    
-      .item-text {
-        @include flex-column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 16px;
+    &:hover {
+      opacity: 1;
+    }
+  }
 
-        .item-title {
-          font-weight: 700;
-          @include h5-text-style;
-        }
+  &__item-text {
+    color: white; 
+    @include desktop {
+    }
+  }
 
-        .item-creator {
-          font-weight: 300;
-          @include h5-text-style;
-        }
-      }
-    }  
+  &__item-title {
+    font-weight: 900;
+    @include h5-text-style;
   }
 }

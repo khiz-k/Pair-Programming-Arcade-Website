@@ -4,13 +4,10 @@
 
 .nav-bar {
   @include flex-column;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: $standard-bg-color;
+  background-color: $global-bg-color;
   width: 100%;
   height: 169px;
   top: 0;
-  position: fixed;
   z-index: 1;
 
   @include tablet {
@@ -20,15 +17,19 @@
   }
 
   &__logo {
-    height: 48px;
+    width: 100%;
+    height: 100%;
     @include flex-center;
+
+    &-image {
+      height: 32px;
+    }
   }
 
-  &__logo-image {
-    height: 32px;
-  }
 
+  
   &__main {
+    width: 100%;
     height: 121px;
     @include flex-center;
 
@@ -38,6 +39,7 @@
   }
 
   &__list {
+    width: 250px;
     list-style-type: none;
     @include flex-column;
     justify-content: space-evenly;
@@ -61,23 +63,11 @@
 
   }
 
-  &__search {
-    border: 2px solid $border-color;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: $field-color;
-    background-image: url('../../assets/Icons/SVG/Icon-search.svg');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    cursor: pointer;
-
-    &:hover {
-        border: 2px solid $primary-CTA-color;
-    }
+  .login-button__link {
+    width: 100%;
   }
 
-  .upload-button {
+  .login-button {
     width: 100%;
     height: 48px;
     color: #FFFFFF;
@@ -87,7 +77,6 @@
     padding: 15px 5px;
     font-size: 13px;
     background-color: $primary-CTA-color;
-    background-image: url('../../assets/Icons/SVG/Icon-upload.svg');
     background-position: 25% 50%; 
     background-repeat: no-repeat;
     cursor: pointer;
@@ -97,7 +86,7 @@
     }
 
     @include tablet {
-        width: 104px;
+        width: 103px;
         background-position: 7.5% 50%; 
     }
   }
@@ -107,6 +96,6 @@
     width: 48px;
     border: none;
     border-radius: 25px;
-    margin: 8px 0 0 16px;
+    margin: 4px 0 0 16px;
   }
 }
