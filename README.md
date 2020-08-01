@@ -1,3 +1,7 @@
+## Overview - 4 hour long project for a mini-hackathon project, abandoned afterwards
+
+Miniclip inspired website.  
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
