@@ -1,4 +1,4 @@
-## Overview - 4 hour long project for a mini-hackathon project, abandoned afterwards - Check demo.mp4 for demo
+## Overview - 3 hour long project for a mini-hackathon project, abandoned afterwards - Check demo.mp4 for demo
 
 Miniclip inspired website.  
 
